@@ -17,7 +17,7 @@ const App = {
 			this.inputValue = '';
 		},
 		removeNote(i, evt) {
-			this.notes = this.notes.filter((val, index) => index !== i)
+			this.notes.splice(i, 1);
 
 		}
 	}
