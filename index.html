@@ -8,13 +8,14 @@
 </head>
 <body>
 
-	<div class="container pt-5" id="app">
-		<div class="card center">
-			<h1>{{ title }}: {{ counter }}</h1>
-			<div>
-				<button class="btn primary" v-on:click="counter++">Plus</button>
-				<button class="btn danger" v-on:click="counter--">Minus</button>
+	<div class="container" id="app">
+		<div class="card">
+			<h1>{{ title }}</h1>
+			<div class="form-control">
+				<input type="text" placeholder="Введите название заметки">
 			</div>
+			<button class="btn">Add</button>
+			<hr>
 		</div>
 	</div>
 

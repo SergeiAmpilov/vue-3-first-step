@@ -2,8 +2,7 @@
 const App = {
 	data() {
 		return {
-			counter: 0,
-			title: 'Счетчик '
+			title: 'Список заметок'
 		};
 	},
 };
