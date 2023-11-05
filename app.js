@@ -11,6 +11,10 @@ const App = {
 	methods: {
 		inputChangeHandler(evt) {
 			this.inputValue = evt.target.value;
+		},
+		addNewNote() {
+			this.notes.push(this.inputValue);
+			this.inputValue = '';
 		}
 	}
 };

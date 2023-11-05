@@ -7,7 +7,6 @@
 	<link rel="stylesheet" href="theme.css">
 </head>
 <body>
-
 	<div class="container" id="app">
 		<div class="card">
 			<h1>{{ title }}</h1>
@@ -21,6 +20,7 @@
 			</div>
 			<button 
 				class="btn"
+				v-on:click="addNewNote"
 			>
 				Add
 			</button>
@@ -33,10 +33,6 @@
 		</div>
 	</div>
 
-
-
-
-	
 	<script src="https://unpkg.com/vue@next"></script>
 	<script src="app.js"></script>
 </body>
