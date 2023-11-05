@@ -13,12 +13,17 @@ const App = {
 			this.inputValue = evt.target.value;
 		},
 		addNewNote() {
+			if (this.inputValue === '') {
+				return undefined;
+			}
 			this.notes.push(this.inputValue);
 			this.inputValue = '';
 		},
 		removeNote(i, evt) {
 			this.notes.splice(i, 1);
-
+		},
+		toUpperCase(item) {
+			return item.toUpperCase();
 		}
 	}
 };
