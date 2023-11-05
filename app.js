@@ -15,6 +15,10 @@ const App = {
 		addNewNote() {
 			this.notes.push(this.inputValue);
 			this.inputValue = '';
+		},
+		removeNote(i, evt) {
+			this.notes = this.notes.filter((val, index) => index !== i)
+
 		}
 	}
 };
