@@ -10,6 +10,7 @@ const App = {
 	},
 	methods: {
 		inputChangeHandler(evt) {
+			console.log(this);
 			this.inputValue = evt.target.value;
 		},
 		addNewNote() {

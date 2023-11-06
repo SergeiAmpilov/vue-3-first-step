@@ -13,15 +13,15 @@
 			<div class="form-control">
 				<input 
 					type="text"
-					v-bind:placeholder="placeholderString"
-					v-bind:value="inputValue"
-					v-on:input="inputChangeHandler"
-					v-on:keypress.enter="addNewNote"
+					:placeholder="placeholderString"
+					:value="inputValue"
+					@input="inputChangeHandler"
+					@keypress.enter="addNewNote"
 				>
 			</div>
 			<button 
 				class="btn"
-				v-on:click="addNewNote"
+				@click="addNewNote"
 			>
 				Add
 			</button>
@@ -29,7 +29,7 @@
 			<ul class="list" v-if="notes.length">
 				<li class="list-item" v-for="(myNote, i) in notes">
 					{{ toUpperCase(myNote) }}
-					<button class="btn danger" v-on:click="removeNote(i, $event)">
+					<button class="btn danger" @click="removeNote(i, $event)">
 						del
 					</button>
 				</li>
