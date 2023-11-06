@@ -10,7 +10,6 @@ const App = {
 	},
 	methods: {
 		inputChangeHandler(evt) {
-			console.log(this);
 			this.inputValue = evt.target.value;
 		},
 		addNewNote() {
@@ -20,12 +19,22 @@ const App = {
 			this.notes.push(this.inputValue);
 			this.inputValue = '';
 		},
+		doubleCount() {
+			console.log('doubleCount');
+			return this.notes.length * 2;
+		},
 		removeNote(i, evt) {
 			this.notes.splice(i, 1);
 		},
 		toUpperCase(item) {
 			return item.toUpperCase();
 		}
+	},
+	computed: {
+		doubleCountComputed() {
+			console.log('doubleCountComputed');
+			return this.notes.length * 2;
+		},
 	}
 };
 
