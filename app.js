@@ -19,10 +19,6 @@ const App = {
 			this.notes.push(this.inputValue);
 			this.inputValue = '';
 		},
-		doubleCount() {
-			console.log('doubleCount');
-			return this.notes.length * 2;
-		},
 		removeNote(i, evt) {
 			this.notes.splice(i, 1);
 		},
@@ -32,9 +28,15 @@ const App = {
 	},
 	computed: {
 		doubleCountComputed() {
-			console.log('doubleCountComputed');
 			return this.notes.length * 2;
 		},
+	},
+	watch: {
+		inputValue(value) {
+			if (value.length > 10) {
+				this.inputValue = '';
+			}
+		}
 	}
 };
 
