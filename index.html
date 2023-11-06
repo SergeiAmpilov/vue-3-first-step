@@ -46,7 +46,9 @@
 					</strong>
 				</li>
 			</ul>
-			<div v-else>
+			<div v-else :class="['bold', {
+				'primary' : true
+			}]">
 				Заметок пока нет. Добавьте первую
 			</div>
 		</div>
