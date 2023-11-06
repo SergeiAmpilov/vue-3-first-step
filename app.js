@@ -9,9 +9,6 @@ const App = {
 		};
 	},
 	methods: {
-		inputChangeHandler(evt) {
-			this.inputValue = evt.target.value;
-		},
 		addNewNote() {
 			if (this.inputValue === '') {
 				return undefined;
